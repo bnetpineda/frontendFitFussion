@@ -14,7 +14,7 @@ export const listDirectors = () => async (dispatch) => {
       type: DIRECTORS_LIST_REQUEST,
     });
 
-    const { data } = await axios.get("http://127.0.0.1:8000/api/directors"); //fetch the products from rest api
+    const { data } = await axios.get("https://backendfitfussion-production.up.railway.app/api/directors"); //fetch the products from rest api
 
     dispatch({
       type: DIRECTORS_LIST_SUCCESS,
@@ -43,7 +43,7 @@ export const detailDirector = () => async (dispatch, getState) => {
 
     console.log(product)
 
-    const { data } = await axios.get(`http://127.0.0.1:8000/api/directors/${product.director}`); //fetch the products from rest api
+    const { data } = await axios.get(`https://backendfitfussion-production.up.railway.app/api/directors/${product.director}`); //fetch the products from rest api
 
     dispatch({
       type: DIRECTORS_DETAILS_SUCCESS,

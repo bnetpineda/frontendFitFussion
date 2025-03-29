@@ -30,7 +30,7 @@ function GenreScreen() {
   }, [dispatch]);
 
   // Define the base URL for the images
-  const baseUrl = 'http://127.0.0.1:8000';
+  const baseUrl = 'https://backendfitfussion-production.up.railway.app';
 
   return (
     <div>

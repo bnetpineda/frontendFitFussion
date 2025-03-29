@@ -41,7 +41,7 @@ function Productscreen() {
       <Row>
         <Col>
           <div style={{ paddingTop: '10px', maxWidth: '1280px', margin: 'auto' }}>
-            <Player src={`http://127.0.0.1:8000${product.video}`} autoPlay={false} fluid={false} width={1280} height={720}>
+            <Player src={`https://backendfitfussion-production.up.railway.app${product.video}`} autoPlay={false} fluid={false} width={1280} height={720}>
               <ControlBar autoHide={true}>
                 <PlayToggle />
                 <VolumeMenuButton vertical />

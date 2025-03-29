@@ -92,7 +92,7 @@ function HomeScreen() {
                 product.description.toLowerCase().includes(search);
             }).map(product => (
               <Col key={product._id}>
-                <Product product={product} baseUrl='http://127.0.0.1:8000' />
+                <Product product={product} baseUrl='https://backendfitfussion-production.up.railway.app' />
               </Col>
             ))}
           </Row>

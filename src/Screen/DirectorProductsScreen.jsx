@@ -21,7 +21,7 @@ function DirectorProductsScreen() {
   }
   useEffect(() =>{
     async function fetchDirectorProducts(){
-      const {data} = await axios.get(`http://127.0.0.1:8000/api/directorproducts/${id}`)
+      const {data} = await axios.get(`https://backendfitfussion-production.up.railway.app/api/directorproducts/${id}`)
       setDirectorProducts(data);
     }
     fetchDirectorProducts()

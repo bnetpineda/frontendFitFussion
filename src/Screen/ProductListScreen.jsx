@@ -41,7 +41,7 @@ const ProductListScreen = () => {
     return null;
   }
 
-  const baseUrl = "http://127.0.0.1:8000"; // Set the base URL here
+  const baseUrl = "https://backendfitfussion-production.up.railway.app"; // Set the base URL here
 
   return (
     <div className="container py-5">

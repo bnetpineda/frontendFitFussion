@@ -17,7 +17,7 @@ export const listGenres = () => async (dispatch) => {
       type: GENRE_LIST_REQUEST,
     });
 
-    const { data } = await axios.get("http://127.0.0.1:8000/api/genres"); //fetch the products from rest api
+    const { data } = await axios.get("https://backendfitfussion-production.up.railway.app/api/genres"); //fetch the products from rest api
 
     dispatch({
       type: GENRE_LIST_SUCCESS,
@@ -40,7 +40,7 @@ export const listGenreMovies = (id) => async (dispatch) => {
       type: GENRE_MOVIES_REQUEST,
     });
 
-    const { data } = await axios.get(`http://127.0.0.1:8000/api/genreproducts/${id}`);
+    const { data } = await axios.get(`https://backendfitfussion-production.up.railway.app/api/genreproducts/${id}`);
 
     dispatch({
       type: GENRE_MOVIES_SUCCESS,
@@ -63,7 +63,7 @@ export const addGenre = (genre) => async (dispatch) => {
       type: GENRE_ADD_REQUEST,
     });
 
-    const { data } = await axios.post("http://127.0.0.1:8000/api/genres/create", genre); //create a new product
+    const { data } = await axios.post("https://backendfitfussion-production.up.railway.app/api/genres/create", genre); //create a new product
 
     dispatch({
       type: GENRE_ADD_SUCCESS,

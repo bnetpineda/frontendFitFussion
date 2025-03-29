@@ -28,7 +28,7 @@ export const addProduct = (product) => async (dispatch) => {
             type: PRODUCT_ADD_REQUEST,
         });
 
-        const { data } = await axios.post('http://127.0.0.1:8000/api/products/create', product); //create a new product
+        const { data } = await axios.post('https://backendfitfussion-production.up.railway.app/api/products/create', product); //create a new product
 
         dispatch({
             type: PRODUCT_ADD_SUCCESS,
@@ -53,7 +53,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
         })
 
         const { data } = await axios.delete(
-            `http://127.0.0.1:8000/api/products/delete/${id}/`,
+            `https://backendfitfussion-production.up.railway.app/api/products/delete/${id}/`,
         )
 
         dispatch({
@@ -77,7 +77,7 @@ export const editProduct = (id, product) => async (dispatch, getState) => {
             type: PRODUCT_EDIT_REQUEST,
         });
 
-        const { data } = await axios.put(`http://127.0.0.1:8000/api/products/update/${id}/`, product)
+        const { data } = await axios.put(`https://backendfitfussion-production.up.railway.app/api/products/update/${id}/`, product)
 
         dispatch({
             type: PRODUCT_EDIT_SUCCESS,
@@ -95,12 +95,6 @@ export const editProduct = (id, product) => async (dispatch, getState) => {
     }
 };
 
-// export function getProduct() {
-//     return axios.get('http://127.0.0.1:8000/product/')
-//         .then(res => {
-//             return res.data
-//         })
-// }
 
 export const listProducts = () => async (dispatch) => {
     try {
@@ -108,7 +102,7 @@ export const listProducts = () => async (dispatch) => {
             type: PRODUCT_LIST_REQUEST,
         });
 
-        const { data } = await axios.get('http://127.0.0.1:8000/api/products'); //fetch the products from rest api
+        const { data } = await axios.get('https://backendfitfussion-production.up.railway.app/api/products'); //fetch the products from rest api
 
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
@@ -132,7 +126,7 @@ export const listProductDetails = (id) => async (dispatch) => {
             type: PRODUCT_DETAILS_REQUEST,
         });
 
-        const { data } = await axios.get(`http://127.0.0.1:8000/api/products/${id}`); //fetch the products from rest api
+        const { data } = await axios.get(`https://backendfitfussion-production.up.railway.app/api/products/${id}`); //fetch the products from rest api
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
