@@ -117,7 +117,7 @@ export const updateAccount = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      '${API_BASE_URL}/auth/updateuser/',
+       `${API_BASE_URL}/auth/updateuser/`,
       user,
       config
     ); //create a new product
@@ -224,7 +224,7 @@ export const paymentUserSuccess = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      '${API_BASE_URL}/auth/updatepayment/',
+      `${API_BASE_URL}/auth/updatepayment/`,
       user,
       config
     ); //create a new product
@@ -274,7 +274,7 @@ export const cancelSubscriptionUser = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      '${API_BASE_URL}/auth/cancelsubscription/',
+      `${API_BASE_URL}/auth/cancelsubscription/`,
       user,
       config
     ); //create a new product
@@ -415,7 +415,7 @@ export const listUsers = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      '${API_BASE_URL}/auth/userlist',
+      `${API_BASE_URL}/auth/userlist`,
       config
     ); //fetch the products from rest api
 
